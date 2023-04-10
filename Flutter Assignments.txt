@@ -1,0 +1,1095 @@
+						Flutter Assignments
+
+
+
+1. What is inheritance?
+=>Inheritance is a fundamental object-oriented programming concept that allows a new class (known as the derived or child class) to be based on an existing class (known as the base or parent class). Inheritance enables the child class to inherit properties and behaviors of the parent class, including fields, methods, and constructors.
+
+This means that the child class can use the same code as the parent class without having to rewrite it, making the code more efficient and easier to maintain. Additionally, the child class can also add its own unique properties and behaviors, further extending the functionality of the program.
+
+Inheritance facilitates code reuse and is a powerful tool in object-oriented programming, allowing developers to create complex software systems with relative ease.
+
+2. Which inheritance is not supported by Dart? Why?
+=>Dart does not support multiple inheritance. Multiple inheritance is the ability of a class to inherit properties and behavior from more than one superclass.
+
+The reason for this is that multiple inheritance can lead to ambiguity and confusion in the code. For example, if two superclasses have methods with the same name, which one should the subclass inherit? This can lead to naming conflicts and make the code harder to read and maintain.
+
+Instead, Dart supports mixins, which allow a class to inherit behavior from multiple mixins. Mixins are a way to reuse a class's code in multiple class hierarchies. With mixins, you can add behavior to a class without making it a subclass of another class. This approach promotes code reuse while avoiding the issues that come with multiple inheritance.
+
+3. What is advantage of inheritance?
+=>Inheritance is a fundamental concept in object-oriented programming, which allows a class to inherit properties and behaviors from a parent class, also known as a superclass or base class. Here are some advantages of inheritance:
+
+Code reusability: Inheritance enables code reuse by allowing a new class to be derived from an existing class, inheriting all of its properties and behaviors. This means that the derived class can leverage the functionality of the base class without having to rewrite it.
+
+Modularity: Inheritance facilitates the creation of modular code by allowing developers to create a hierarchy of classes, each responsible for a specific set of properties and behaviors. This allows for a clear separation of concerns, making the code easier to understand and maintain.
+
+Polymorphism: Inheritance enables polymorphism, which means that objects of a derived class can be used wherever objects of the base class are expected. This allows for greater flexibility and extensibility in the code.
+
+Reduced code complexity: Inheritance can help to reduce code complexity by providing a well-defined structure for organizing related classes and their associated properties and behaviors.
+
+Overall, inheritance is a powerful mechanism for creating flexible and reusable code, which can save time and effort in the development process.
+
+4. Difference between inheritance and encapsulation.
+=>Inheritance and encapsulation are both important concepts in object-oriented programming, but they serve different purposes and have distinct characteristics.
+
+Inheritance:
+Inheritance is a mechanism that allows a class to inherit properties and methods from another class. Inheritance establishes a parent-child relationship between two classes where the child class (also called the subclass) inherits properties and methods from the parent class (also called the superclass).
+
+Inheritance is used to achieve code reusability and to model hierarchical relationships between classes. Inheritance allows the subclass to access and use the properties and methods of the superclass, and also to override them if needed.
+
+Encapsulation:
+Encapsulation is the mechanism of hiding the internal details of an object from the outside world and accessing it only through a public interface. Encapsulation helps to protect the internal state of an object from unauthorized access and modification, and also to achieve information hiding.
+
+Encapsulation is implemented by defining the properties and methods of a class as private or protected, and providing a public interface through which the outside world can interact with the object. Encapsulation helps to achieve modular design, reduces code complexity and increases the maintainability of the code.
+
+In summary, inheritance is used to establish hierarchical relationships between classes and to achieve code reusability, while encapsulation is used to hide the internal details of an object and to provide a public interface for accessing its functionalities.
+
+5. Difference between inheritance and abstraction.
+=>Inheritance and abstraction are two important concepts in object-oriented programming.
+
+Inheritance refers to the mechanism by which a subclass (or derived class) inherits properties and methods from a superclass (or base class). In other words, the subclass can reuse the code of the superclass and add its own functionality on top of it. Inheritance establishes an "is-a" relationship between the subclasses and their superclasses. For example, a class "Car" can inherit from a class "Vehicle", as a car is a type of vehicle.
+
+Abstraction, on the other hand, is a mechanism of hiding the implementation details of a class, and exposing only the essential features of the class to the outside world. Abstraction focuses on the behavior of an object rather than its implementation. It provides a way of creating complex systems by breaking them down into smaller, more manageable parts. Abstraction can be achieved through abstract classes or interfaces. For example, a class "Animal" can have abstract methods such as "eat" or "sleep", which are implemented by its subclasses.
+
+6. Difference between inheritance and polymorphism.
+=>Inheritance and polymorphism are two fundamental concepts in object-oriented programming.
+
+Inheritance is a mechanism that allows a new class to be based on an existing class, inheriting all the properties and methods of the parent class. Inheritance is typically used to create a more specific version of a class by adding or overriding properties and methods. The new class is called the child or derived class, and the original class is called the parent or base class.
+
+Polymorphism, on the other hand, is a concept that allows objects of different classes to be treated as if they are of the same class. Polymorphism allows the same method or operation to behave differently depending on the type of object it is applied to. This means that a method can have different implementations depending on the object it is called upon.
+
+To summarize, inheritance is a mechanism that allows a new class to be based on an existing class, while polymorphism is a concept that allows different objects to be treated as if they are of the same class. Inheritance is a way to reuse code and create a hierarchy of classes, while polymorphism is a way to make code more flexible and adaptable to different types of objects.
+
+7. Can we override static method in Dart?
+=>In Dart, you cannot override a static method of a parent class in a subclass. This is because static methods belong to the class itself and not to an instance of the class. When you define a static method in a subclass with the same name as a static method in the parent class, it simply hides the parent class's method.
+
+8. Can we overload static method in Dart?
+=>In Dart, it is not possible to overload static methods because Dart does not support method overloading. Method overloading refers to the ability to define multiple methods with the same name but different parameters within the same class.
+
+In Dart, if you define multiple methods with the same name within a class, the compiler will raise an error. This applies to both instance methods and static methods.
+
+However, you can achieve similar functionality by using optional parameters or named parameters in a method. For example, you could define a single static method that accepts optional or named parameters to handle different scenarios, rather than defining multiple methods with different parameter lists.
+
+9. Can a class implement more than one interface?
+=>Yes, in most object-oriented programming languages, a class can implement more than one interface. This is known as multiple interface implementation.
+
+When a class implements multiple interfaces, it is required to provide implementations for all the methods defined in each interface. This allows the class to provide different behaviors based on the context in which it is used.
+
+For example, consider a class called "Animal" that implements two interfaces: "Mammal" and "Canine". The "Mammal" interface might have methods such as "giveBirth()" and "nurseYoung()", while the "Canine" interface might have methods such as "bark()" and "fetch()". By implementing both interfaces, the "Animal" class can provide implementations for all of these methods and be used in contexts where either a mammal or a canine is required.
+
+10. Can a class extend more than one class in Dart?
+=>No, in Dart, a class can only directly extend one superclass at a time. This is known as single inheritance.
+
+However, Dart supports the concept of mixins, which allow a class to inherit functionality from multiple sources. A mixin is a class that can be used to provide a specific behavior to multiple classes without having to inherit from that class.
+
+11. Can an interface extend more than one interface in Dart?
+=>Yes, in Dart, an interface can extend more than one interface using the extends keyword, followed by a comma-separated list of the interfaces to be extended. This is known as multiple inheritance of interfaces.
+
+12. What will happen if a class implements two interfaces and they both have a method
+with same name and signature?
+=>If a class implements two interfaces and they both have a method with the same name and signature, then the class must provide an implementation for the method that satisfies both interfaces. This means that the method must have the same return type, parameter list, and method name as specified in both interfaces.
+
+In this case, the compiler may not be able to determine which interface method to call, since both methods have the same name and signature. Therefore, the class implementing both interfaces must provide its own implementation that satisfies both interfaces.
+
+13. Can we pass an object of a subclass to a method expecting an object of the super
+class? 
+=>Yes, it is possible to pass an object of a subclass to a method that is expecting an object of the superclass. This is because a subclass is a specialization of the superclass and therefore inherits all the methods and properties of the superclass.
+
+When a subclass object is passed to a method that expects a superclass object, the method will treat the object as if it were an instance of the superclass. This is known as "polymorphism" and it is a fundamental concept in object-oriented programming.
+
+For example, consider a class hierarchy with a superclass Animal and a subclass Dog. If there is a method that takes an Animal object as an argument, then a Dog object can be passed to that method because Dog is a subclass of Animal.
+
+14. Are static members inherited to sub classes?
+=>Yes, static members are inherited to subclasses in object-oriented programming.
+
+When a subclass is derived from a superclass, it inherits all the members of the superclass, including static members. Static members are associated with the class itself rather than any particular instance of the class, so they are shared among all instances of the class as well as any subclasses that inherit from it.
+
+Subclasses can access the static members of their superclass using the superclass name followed by the static member name, just like any other member of the superclass. However, subclasses cannot override static members, as they are associated with the class and not with any particular instance of the class.
+
+15. What happens if the parent and the child class have a field with same identifier? 
+=>If both the parent and child class have a field with the same identifier (i.e., variable name), the child class field will override the parent class field. This means that when the child class object is instantiated, the field from the child class will be used instead of the field from the parent class.
+
+16. Are constructors and initializers also inherited to sub classes?
+=>Yes, constructors are inherited to subclasses in Dart. When a subclass is created, it automatically inherits the constructor of its superclass. This means that the subclass can use the constructor of its superclass to initialize its own instance variables, as well as any instance variables that are inherited from the superclass.
+
+17. How do you restrict a member of a class from inheriting by its sub classes?
+=>In Dart, you can restrict a member of a class from being inherited by its subclasses by marking it as final. A final member of a class cannot be overridden by its subclasses, and any attempt to do so will result in a compilation error.
+
+18. How do you implement multiple inheritance in Dart? Can a class extend by itself in
+Dart?
+=>Dart does not support multiple inheritance, which means that a class cannot inherit from more than one class at the same time. However, Dart provides a way to achieve a similar effect using mixins.
+
+A mixin is a class that provides a set of methods and instance variables that can be reused in multiple classes. To use a mixin in a class, you can use the with keyword followed by the name of the mixin class. This allows the class to inherit the methods and instance variables of the mixin class, effectively adding them to its own interface.
+
+19. How do you override a private method in Dart?
+=>In Dart, you cannot directly override a private method of a superclass in a subclass. Private methods in Dart are only visible within the class in which they are defined, and cannot be accessed from outside that class or its subclasses.
+
+However, you can achieve similar behavior using public methods in the superclass that call the private methods. By overriding the public method in the subclass, you can effectively change the behavior of the private method that it calls.
+
+20. When to overload a method in Dart and when to override it?
+=>In Dart, method overloading and method overriding serve different purposes and are used in different situations.
+
+Method overloading is used when you want to provide multiple versions of a method with different parameters. When you overload a method, you define multiple methods with the same name but different parameter lists. The method that gets called depends on the number and types of arguments passed to it. Method overloading is useful when you want to provide more than one way to call a method with different arguments, without having to give each method a unique name.
+
+Method overriding, on the other hand, is used when you want to change or extend the behavior of a method that is already defined in a superclass. When you override a method, you provide a new implementation for the method in a subclass. This allows you to change the behavior of the method for objects of the subclass, while still keeping the same method signature and name as the superclass.
+
+So, in summary, you should overload a method when you want to provide multiple versions of a method with different parameters, while you should override a method when you want to change or extend the behavior of a method that is already defined in a superclass.
+
+21. What the order is of extends and implements keyword on Dart class declaration?
+B23. How do you prevent overriding a Dart method without using the final modifier?
+B24. What are the rules of method overriding in Dart?
+=>B23. To prevent overriding a Dart method without using the final modifier, you can make the method static. Static methods are not inherited by subclasses, and therefore cannot be overridden.
+
+B24. The rules of method overriding in Dart are as follows:
+
+The signature of the overriding method must match the signature of the overridden method in the superclass. This includes the method name, return type, and parameter list.
+
+The overriding method cannot have a more restrictive access level than the overridden method. For example, if the overridden method is public, the overriding method cannot be private.
+
+The @override annotation must be used to indicate that the method is intended to override a method in the superclass. This is not strictly required by the Dart language, but it is considered good practice and can help prevent accidental errors.
+
+The overriding method can call the overridden method in the superclass using the super keyword.
+
+22. Difference between method overriding and overloading in Dart.
+=>1.Method Overloading: Method overloading in Dart refers to the ability to define multiple methods with the same name within the same class, but with different parameters. The methods must have different parameter types or a different number of parameters. Dart does not support method overloading based on the return type. The correct method to be called is determined by the number and types of arguments passed to it during the method invocation.
+2.Method Overriding: Method overriding in Dart occurs when a subclass provides a specific implementation of a method that is already provided by its parent class. The subclass must declare a method with the same name, return type, and parameters as the parent class's method. In method overriding, the subclass's method takes precedence over the parent class's method.
+
+23. What happens when a class implements two interfaces and both declare field
+(variable) with same name?
+=>When a class implements two interfaces and both declare a field with the same name, the class must provide an implementation of that field. The class can choose to implement the field from one of the interfaces or provide its own implementation.
+
+In Dart, when a class implements two interfaces that declare a field with the same name, the class is required to provide an implementation of the field. The implementation can either use one of the existing fields or provide a new implementation.
+
+24. Can a subclass instance method override a superclass static method?
+=>No, a subclass instance method cannot override a superclass static method in Dart. This is because static methods are associated with the class itself, rather than with any instance of the class. They are called using the class name and not an instance of the class.
+
+On the other hand, instance methods are associated with an instance of the class. They can be called using an instance of the class.
+
+When a subclass defines an instance method with the same name as a static method in its superclass, it does not override the static method. Instead, it creates a new instance method in the subclass with the same name as the static method in the superclass.
+
+25. Can a subclass static method hide superclass instance method?
+=>No, a subclass static method cannot hide a superclass instance method in Dart. This is because static methods are associated with the class itself, rather than with any instance of the class. They are called using the class name and not an instance of the class.
+
+On the other hand, instance methods are associated with an instance of the class. They can be called using an instance of the class.
+
+When a subclass defines a static method with the same name as an instance method in its superclass, it does not hide or override the instance method. Instead, it creates a new static method in the subclass with the same name as the instance method in the superclass.
+
+26. Can a superclass access subclass member?
+=>No, a superclass cannot access subclass members directly in Dart. This is because subclasses can add their own members, which are not available to the superclass.
+
+However, a subclass can expose its members to the superclass by defining getters and setters that provide access to those members. The superclass can then access the members using the getters and setters.
+
+27. Difference between object oriented and object based language.
+=>Object-oriented programming (OOP) and object-based programming (OBP) are two approaches to programming that use objects as the primary building blocks of software. However, there are some key differences between the two.
+
+Object-oriented programming is a programming paradigm that revolves around the concept of objects. It allows developers to create objects that contain both data and behavior, and to create classes that define the structure and behavior of those objects. OOP languages like Java, C++, Python, and Dart allow developers to create and manipulate objects and define relationships between them.
+
+On the other hand, object-based programming is a programming paradigm that allows developers to create objects, but it does not allow them to create classes or define relationships between objects. In other words, object-based programming is a subset of OOP that lacks some of the more advanced features of OOP languages. Examples of object-based programming languages include JavaScript, VBScript, and ActionScript.
+
+Here are some of the key differences between object-oriented programming and object-based programming:
+
+Classes: Object-oriented programming languages provide support for creating classes that define the structure and behavior of objects. Object-based programming languages do not have classes, and objects are created using constructor functions.
+
+Inheritance: Object-oriented programming languages support inheritance, which allows classes to inherit properties and methods from parent classes. Object-based programming languages do not support inheritance.
+
+Polymorphism: Object-oriented programming languages support polymorphism, which allows objects of different classes to be treated as if they were of the same class. Object-based programming languages do not support polymorphism.
+
+Encapsulation: Object-oriented programming languages support encapsulation, which allows data and behavior to be hidden within objects and only accessed through public interfaces. Object-based programming languages do not provide the same level of encapsulation.
+
+
+28. Explain Diamond problem.
+=>The Diamond problem is a common issue that arises in class hierarchies when multiple inheritance is allowed. It occurs when a subclass inherits from two or more superclasses that share a common ancestor. This creates a diamond-shaped inheritance hierarchy, where a subclass has two or more direct superclasses that have a common superclass.
+
+In Dart, the Diamond problem can occur when a class inherits from two or more classes that define a method with the same name and signature. When this happens, the subclass inherits both methods and must provide its own implementation to resolve the conflict.
+
+29. Why Dart does not support operator overloading? 
+=>Dart does not support operator overloading for a few reasons:
+
+Simplicity: Dart is designed to be a simple, easy-to-learn language. Operator overloading can add complexity to the language and make it more difficult to learn and understand for beginners.
+
+Readability: Code that makes heavy use of operator overloading can be difficult to read and understand, especially for developers who are not familiar with the specific implementation.
+
+Consistency: Operator overloading can lead to inconsistencies in code behavior, especially if different classes implement the same operator in different ways. This can lead to unexpected results and make debugging more difficult.
+
+Avoiding ambiguity: Operator overloading can lead to ambiguity in code, where the same operator could have multiple meanings depending on the context. This can make code difficult to understand and lead to bugs.
+
+30. What is Encapsulation in Dart?
+=>Encapsulation in Dart is the concept of hiding the internal details of a class and exposing only a well-defined public interface for other objects to interact with. It is a fundamental concept of object-oriented programming that helps to improve code maintainability, reliability, and security.
+
+In Dart, encapsulation is achieved through the use of access modifiers, such as public, private, and protected. These modifiers control the visibility of a class member, such as a method or variable, to other objects in the program.
+
+A public member can be accessed by any object in the program, while a private member can only be accessed by the class itself. This means that other objects cannot directly modify or access the internal state of the class. Instead, they must use the public interface provided by the class to interact with it.
+
+31. Which of the Dart OOPS feature promotes access protection or data hiding?
+=>The private access modifier in Dart promotes access protection and data hiding. It allows class members, such as fields and methods, to be hidden from other classes and objects in the program, which helps to ensure that the class's internal state is not modified or accessed in unexpected ways.
+
+By using the private access modifier, class members can only be accessed from within the same class. This means that other classes and objects cannot directly modify or access the internal state of the class, but must instead use public methods provided by the class to interact with it.
+
+In addition to the private access modifier, Dart also provides the protected access modifier, which allows class members to be accessed by subclasses of the class, but not by other objects in the program. This helps to promote access protection and data hiding in inheritance hierarchies, where subclasses may need to access the internal state of their superclass.
+
+32. Create a class named 'PrintNumber' to print various numbers of different datatypes
+by creating different methods with the same name 'printn' having a parameter for each
+data type.
+=>Here is an example implementation of the PrintNumber class in Dart, which provides different printn methods for printing numbers of different data types:
+
+class PrintNumber {
+  void printn(int number) {
+    print('Printing integer: $number');
+  }
+
+  void printn(double number) {
+    print('Printing double: $number');
+  }
+
+  void printn(String number) {
+    print('Printing string: $number');
+  }
+
+  void printn(bool number) {
+    print('Printing boolean: $number');
+  }
+}
+
+void main() {
+  var printer = PrintNumber();
+
+  printer.printn(10);
+  printer.printn(3.14);
+  printer.printn('Hello, World!');
+  printer.printn(true);
+}
+
+33. Create a class to print an integer and a character with two methods having the same
+name but different sequence of the integer and the character parameters. For example,
+if the parameters of the first method are of the form (int n, char c), then that of the
+second method will be of the form (char c, int n).
+=>Here is an example implementation of the class in Dart, which provides two methods with the same name printnc, but with different parameter sequences:
+
+class PrintNC {
+  void printnc(int n, String c) {
+    print('Printing integer and character: $n, $c');
+  }
+
+  void printnc(String c, int n) {
+    print('Printing character and integer: $c, $n');
+  }
+}
+
+void main() {
+  var printer = PrintNC();
+
+  printer.printnc(10, 'a');
+  printer.printnc('b', 20);
+}
+
+34. Create a class to print the area of a square and a rectangle. The class has two
+methods with the same name but different number of parameters. The method for
+printing area of a rectangle has two parameters which are length and breadth
+respectively while the other method for printing area of square has one parameter
+which is side of square.
+=>Here's an example implementation of the class in Dart, which provides two methods with the same name printArea, but with different numbers of parameters:
+class Shape {
+  void printArea(int side) {
+    int area = side * side;
+    print('Area of the square: $area');
+  }
+
+  void printArea(int length, int breadth) {
+    int area = length * breadth;
+    print('Area of the rectangle: $area');
+  }
+}
+
+void main() {
+  Shape shape = Shape();
+
+  shape.printArea(5);           // prints "Area of the square: 25"
+  shape.printArea(3, 4);        // prints "Area of the rectangle: 12"
+}
+
+
+35. Create a class with a method that prints "This is a parent class" and its subclass
+with another method that prints "This is child class". Now, create an object for each of
+the class and call 1 - method of parent class by object of parent class 2 - method of child
+class by object of child class 3 - method of parent class by object of child class.
+=>Here's an example implementation of the parent and child classes in Dart:
+
+class Parent {
+  void printMessage() {
+    print('This is a parent class');
+  }
+}
+
+class Child extends Parent {
+  void printMessage() {
+    print('This is a child class');
+  }
+}
+
+void main() {
+  Parent parent = Parent();
+  Child child = Child();
+
+  parent.printMessage();   // prints "This is a parent class"
+  child.printMessage();    // prints "This is a child class"
+  (child as Parent).printMessage(); // prints "This is a parent class"
+}
+
+36. Create a class named 'Member' having the following members:
+Data members 1 - Name 2 - Age 3.
+=>Here's an example implementation of the Member class in Dart:
+
+class Member {
+  String name;
+  int age;
+  String address;
+
+  Member(this.name, this.age, this.address);
+
+  void printDetails() {
+    print('Name: $name');
+    print('Age: $age');
+    print('Address: $address');
+  }
+}
+
+void main() {
+  Member member = Member('John', 30, '123 Main St');
+  member.printDetails();   // prints details of the member
+}
+
+37. Phone number 4 - Address 5 - Salary It also has a method named 'printSalary' which
+prints the salary of the members. Two classes 'Employee' and 'Manager' inherits the
+'Member' class. The 'Employee' and 'Manager' classes have data members
+'specialization' and 'department' respectively. Now, assign name, age, phone number,
+address and salary to an employee and a manager by making an object of both of these
+classes and print the same.
+=>Here's an example implementation of the Member, Employee, and Manager classes in Dart:
+
+class Member {
+  String name;
+  int age;
+  String phoneNumber;
+  String address;
+  double salary;
+
+  Member(this.name, this.age, this.phoneNumber, this.address, this.salary);
+
+  void printSalary() {
+    print('Salary: \$${salary.toStringAsFixed(2)}');
+  }
+}
+
+class Employee extends Member {
+  String specialization;
+
+  Employee(String name, int age, String phoneNumber, String address, double salary, this.specialization) : super(name, age, phoneNumber, address, salary);
+}
+
+class Manager extends Member {
+  String department;
+
+  Manager(String name, int age, String phoneNumber, String address, double salary, this.department) : super(name, age, phoneNumber, address, salary);
+}
+
+void main() {
+  Employee employee = Employee('John Doe', 25, '555-1234', '123 Main St', 50000, 'Software Engineering');
+  employee.printDetails();
+  employee.printSalary();
+
+  Manager manager = Manager('Jane Smith', 35, '555-5678', '456 Park Ave', 75000, 'Human Resources');
+  manager.printDetails();
+  manager.printSalary();
+}
+
+38. Create a class named 'Rectangle' with two data members 'length' and 'breadth' and
+two methods to print the area and perimeter of the rectangle respectively. Its
+constructor having parameters for length and breadth is used to initialize the length
+and breadth of the rectangle. Let class 'Square' inherit the 'Rectangle' class with its
+constructor having a parameter for its side (suppose s) calling the constructor of its
+parent class as 'super (s, s)'. Print the area and perimeter of a rectangle and a square.
+=>Here's the Dart code to implement the above scenario:
+
+class Rectangle {
+  double length;
+  double breadth;
+
+  Rectangle(this.length, this.breadth);
+
+  void area() {
+    double area = length * breadth;
+    print('Area of rectangle: $area');
+  }
+
+  void perimeter() {
+    double perimeter = 2 * (length + breadth);
+    print('Perimeter of rectangle: $perimeter');
+  }
+}
+
+class Square extends Rectangle {
+  Square(double side) : super(side, side);
+}
+
+void main() {
+  Rectangle rectangle = Rectangle(4, 5);
+  rectangle.area();
+  rectangle.perimeter();
+
+  Square square = Square(5);
+  square.area();
+  square.perimeter();
+}
+
+
+output:-Area of rectangle: 20.0
+Perimeter of rectangle: 18.0
+Area of rectangle: 25.0
+Perimeter of rectangle: 20.0
+
+
+39. Write a program to print the area and perimeter of a triangle having sides of 3, 4
+and 5 units by creating a class named 'Triangle' without any parameter in its
+constructor.
+=>Here's an example program in Dart that creates a class named Triangle to calculate and print the area and perimeter of a triangle with sides of 3, 4, and 5 units.
+
+class Triangle {
+  double a, b, c;
+
+  Triangle() {
+    a = 3.0;
+    b = 4.0;
+    c = 5.0;
+  }
+
+  double getPerimeter() {
+    return a + b + c;
+  }
+
+  double getArea() {
+    double s = (a + b + c) / 2.0;
+    return sqrt(s * (s - a) * (s - b) * (s - c));
+  }
+}
+
+void main() {
+  Triangle t = new Triangle();
+  print('Perimeter: ${t.getPerimeter()}');
+  print('Area: ${t.getArea()}');
+}
+
+output-
+Perimeter: 12.0
+Area: 6.0
+
+40. Print the sum, difference and product of two complex numbers by creating a class
+named 'Complex' with separate methods for each operation whose real and imaginary
+parts are entered by user.
+=>Here's a possible implementation of the 'Complex' class in Dart to print the sum, difference and product of two complex numbers:
+class Complex {
+  double real, imag;
+
+  Complex(this.real, this.imag);
+
+  Complex sum(Complex other) {
+    return Complex(real + other.real, imag + other.imag);
+  }
+
+  Complex difference(Complex other) {
+    return Complex(real - other.real, imag - other.imag);
+  }
+
+  Complex product(Complex other) {
+    return Complex(real * other.real - imag * other.imag,
+                   real * other.imag + imag * other.real);
+  }
+}
+
+void main() {
+  // create two complex numbers
+  var c1 = Complex(2.0, 3.0);
+  var c2 = Complex(4.0, 5.0);
+
+  // print the sum, difference and product of the two numbers
+  var c3 = c1.sum(c2);
+  var c4 = c1.difference(c2);
+  var c5 = c1.product(c2);
+
+  print("Sum: ${c3.real} + ${c3.imag}i");
+  print("Difference: ${c4.real} + ${c4.imag}i");
+  print("Product: ${c5.real} + ${c5.imag}i");
+}
+
+41. Create an abstract class 'Parent' with a method 'message'. It has two subclasses each
+having a method with the same name 'message' that prints "This is first subclass" and
+"This is second subclass" respectively. Call the methods 'message' by creating an object
+for each subclass.
+=>In Dart, an abstract class can be created using the abstract keyword. Abstract classes cannot be instantiated directly, but can be used as a base for other classes.
+
+Here is an example code that implements the given scenario:
+
+abstract class Parent {
+  void message(); // abstract method
+}
+
+class FirstSubclass extends Parent {
+  @override
+  void message() {
+    print("This is first subclass");
+  }
+}
+
+class SecondSubclass extends Parent {
+  @override
+  void message() {
+    print("This is second subclass");
+  }
+}
+
+void main() {
+  Parent obj1 = FirstSubclass();
+  Parent obj2 = SecondSubclass();
+  obj1.message(); // prints "This is first subclass"
+  obj2.message(); // prints "This is second subclass"
+}
+
+42. Create an abstract class 'Bank' with an abstract method 'getBalance'. $100, $150
+and $200 are deposited in banks A, B and C respectively. 'BankA', 'BankB' and 'BankC'
+are subclasses of class 'Bank', each having a method named 'getBalance'. Call this
+method by creating an object of each of the three classes.
+=>abstract class Bank {
+  void getBalance();
+}
+
+class BankA extends Bank {
+  int balance = 100;
+  
+  @override
+  void getBalance() {
+    print('Bank A balance: \$${balance}');
+  }
+}
+
+class BankB extends Bank {
+  int balance = 150;
+  
+  @override
+  void getBalance() {
+    print('Bank B balance: \$${balance}');
+  }
+}
+
+class BankC extends Bank {
+  int balance = 200;
+  
+  @override
+  void getBalance() {
+    print('Bank C balance: \$${balance}');
+  }
+}
+
+void main() {
+  BankA a = BankA();
+  BankB b = BankB();
+  BankC c = BankC();
+  
+  a.getBalance();
+  b.getBalance();
+  c.getBalance();
+}
+
+
+output:-Bank A balance: $100
+Bank B balance: $150
+Bank C balance: $200
+
+43. We have to calculate the percentage of marks obtained in three subjects (each out of
+100) by student A and in four subjects (each out of 100) by student B. Create an
+abstract class 'Marks' with an abstract method 'getPercentage'. It is inherited by two
+other classes 'A' and 'B' each having a method with the same name which returns the
+percentage of the students. The constructor of student A takes the marks in three
+subjects as its parameters and the marks in four subjects as its parameters for student
+B. Create an object for eac of the two classes and print the percentage of marks for both
+the students.
+=>abstract class Marks {
+  double getPercentage();
+}
+
+class A extends Marks {
+  double sub1, sub2, sub3;
+
+  A(this.sub1, this.sub2, this.sub3);
+
+  @override
+  double getPercentage() {
+    double totalMarks = sub1 + sub2 + sub3;
+    double percentage = totalMarks / 3;
+    return percentage;
+  }
+}
+
+class B extends Marks {
+  double sub1, sub2, sub3, sub4;
+
+  B(this.sub1, this.sub2, this.sub3, this.sub4);
+
+  @override
+  double getPercentage() {
+    double totalMarks = sub1 + sub2 + sub3 + sub4;
+    double percentage = totalMarks / 4;
+    return percentage;
+  }
+}
+
+// creating objects for each of the two classes
+A studentA = A(80, 70, 90);
+B studentB = B(75, 80, 85, 90);
+
+// printing the percentage of marks for both the students
+print("Percentage of marks obtained by student A: ${studentA.getPercentage()}");
+print("Percentage of marks obtained by student B: ${studentB.getPercentage()}");
+
+44. Write a program to print the factorial of a number by defining a method named
+'Factorial'. Factorial of any number n is represented by n! And is equal to 1*2*3*.
+*(n-1) *n. E.g. - 4! = 1*2*3*4 = 24 3! = 3*2*1 = 6 2! = 2*1 = 2 Also, 1! = 1 0! = 0
+=>Here's a possible implementation of the program to print the factorial of a number in Dart:
+
+int factorial(int n) {
+  if (n < 0) {
+    throw Exception("Factorial of negative number is undefined");
+  }
+  int result = 1;
+  for (int i = 2; i <= n; i++) {
+    result *= i;
+  }
+  return result;
+}
+
+void main() {
+  int n = 4;
+  int fact = factorial(n);
+  print("$n! = $fact");
+}
+
+output:-4! = 24
+
+45. We have to calculate the area of a rectangle, a square and a circle. Create an
+abstract class 'Shape' with three abstract methods namely 'RectangleArea' taking two
+parameters, 'SquareArea' and 'CircleArea' taking one parameter each. The parameters
+of 'RectangleArea' are its length and breadth, that of 'SquareArea' is its side and that of
+'CircleArea' is its radius. Now create another class 'Area' containing all the three
+methods 'RectangleArea', 'SquareArea' and 'CircleArea' for printing the area of
+rectangle, square and circle respectively. Create an object of class 'Area' and call all the
+three methods.
+=>abstract class Shape {
+  double rectangleArea(double length, double breadth);
+  double squareArea(double side);
+  double circleArea(double radius);
+}
+
+class Area implements Shape {
+  @override
+  double rectangleArea(double length, double breadth) {
+    return length * breadth;
+  }
+
+  @override
+  double squareArea(double side) {
+    return side * side;
+  }
+
+  @override
+  double circleArea(double radius) {
+    return 3.14 * radius * radius;
+  }
+}
+
+void main() {
+  Area area = Area();
+  double length = 5.0, breadth = 10.0;
+  double side = 7.0;
+  double radius = 3.5;
+
+  double rectangleArea = area.rectangleArea(length, breadth);
+  double squareArea = area.squareArea(side);
+  double circleArea = area.circleArea(radius);
+
+  print("Area of rectangle: $rectangleArea");
+  print("Area of square: $squareArea");
+  print("Area of circle: $circleArea");
+}
+
+output:-Area of rectangle: 50.0
+Area of square: 49.0
+Area of circle: 38.465
+
+46. Write a program which will ask the user to enter his/her marks (out of 100). Define a
+method that will display grades according to the marks entered as below:
+Marks Grade
+ 91-100 AA
+81-90 B
+71-80 BB
+ 61-70 BC
+ 51-60 CD
+ 41-50 DD
+ <=40 Fail
+
+=>import 'dart:io';
+
+void main() {
+  print("Enter your marks (out of 100):");
+  int marks = int.parse(stdin.readLineSync()!);
+  
+  String grade = getGrade(marks);
+  print("Grade: $grade");
+}
+
+String getGrade(int marks) {
+  String grade = "";
+  
+  if (marks >= 91 && marks <= 100) {
+    grade = "AA";
+  } else if (marks >= 81 && marks <= 90) {
+    grade = "B";
+  } else if (marks >= 71 && marks <= 80) {
+    grade = "BB";
+  } else if (marks >= 61 && marks <= 70) {
+    grade = "BC";
+  } else if (marks >= 51 && marks <= 60) {
+    grade = "CD";
+  } else if (marks >= 41 && marks <= 50) {
+    grade = "DD";
+  } else {
+    grade = "Fail";
+  }
+  
+  return grade;
+}
+
+output:-Grade: BB
+
+47. Create a class named 'Shape' with a method to print "This is This is shape". Then
+create two other classes named 'Rectangle', 'Circle' inheriting the Shape class, both
+having a method to print "This is rectangular shape" and "This is circular shape"
+respectively. Create a subclass 'Square' of 'Rectangle' having a method to print "Square
+is a rectangle". Now call the method of 'Shape' and 'Rectangle' class by the object of
+'Square' class.
+=>
+class Shape {
+  void printShape() {
+    print("This is shape");
+  }
+}
+
+class Rectangle extends Shape {
+  void printShape() {
+    print("This is rectangular shape");
+  }
+}
+
+class Circle extends Shape {
+  void printShape() {
+    print("This is circular shape");
+  }
+}
+
+class Square extends Rectangle {
+  void printSquare() {
+    print("Square is a rectangle");
+  }
+}
+
+void main() {
+  Square square = Square();
+  square.printShape(); // prints "This is rectangular shape"
+  square.printSquare(); // prints "Square is a rectangle"
+}
+
+output:-This is rectangular shape
+Square is a rectangle
+
+48. All the banks operating in India are controlled by RBI. RBI has set a well-defined
+guideline (e.g. minimum interest rate, minimum balance allowed, maximum
+withdrawal limit etc) which all banks must follow. For example, suppose RBI has set
+minimum interest rate applicable to a saving bank account to be 4% annually; however,
+banks are free to use 4% interest rate or to set any rates above it. Write a DART
+program to implement bank functionality in the above scenario and demonstrate the
+dynamic polymorphism concept. Note: Create few classes namely Customer, Account,
+RBI (Base Class) and few derived classes (SBI, ICICI, PNB etc). Assume and implement
+required member variables and functions in each class.
+=>import 'dart:io';
+
+class Customer {
+  String name;
+  String address;
+  int contactNumber;
+
+  Customer(this.name, this.address, this.contactNumber);
+}
+
+class Account {
+  int accountNumber;
+  double balance;
+  Customer customer;
+
+  Account(this.accountNumber, this.balance, this.customer);
+
+  void deposit(double amount) {
+    balance += amount;
+    print('$amount deposited successfully');
+  }
+
+  void withdraw(double amount) {
+    if (balance - amount >= 0) {
+      balance -= amount;
+      print('$amount withdrawn successfully');
+    } else {
+      print('Insufficient balance');
+    }
+  }
+
+  void display() {
+    print('Account Number: $accountNumber');
+    print('Balance: $balance');
+    print('Customer Name: ${customer.name}');
+    print('Customer Address: ${customer.address}');
+    print('Customer Contact Number: ${customer.contactNumber}');
+  }
+}
+
+class RBI {
+  double minimumInterestRate;
+  double minimumBalanceAllowed;
+  double maximumWithdrawalLimit;
+
+  RBI(this.minimumInterestRate, this.minimumBalanceAllowed,
+      this.maximumWithdrawalLimit);
+
+  void setMinimumInterestRate(double rate) {
+    minimumInterestRate = rate;
+  }
+
+  void setMinimumBalanceAllowed(double balance) {
+    minimumBalanceAllowed = balance;
+  }
+
+  void setMaximumWithdrawalLimit(double limit) {
+    maximumWithdrawalLimit = limit;
+  }
+
+  bool isInterestRateValid(double rate) {
+    return rate >= minimumInterestRate;
+  }
+
+  bool isBalanceValid(double balance) {
+    return balance >= minimumBalanceAllowed;
+  }
+
+  bool isWithdrawalLimitValid(double amount) {
+    return amount <= maximumWithdrawalLimit;
+  }
+}
+
+class SBI extends RBI {
+  SBI() : super(4.0, 1000.0, 25000.0);
+}
+
+class ICICI extends RBI {
+  ICICI() : super(3.5, 5000.0, 50000.0);
+}
+
+class PNB extends RBI {
+  PNB() : super(3.75, 2000.0, 20000.0);
+}
+
+void main() {
+  SBI sbi = SBI();
+  ICICI icici = ICICI();
+  PNB pnb = PNB();
+
+  Account sbiAccount = Account(
+      101, 5000.0, Customer('John', 'Pune', 9876543210));
+  Account iciciAccount =
+      Account(102, 8000.0, Customer('Mike', 'Mumbai', 9876543211));
+  Account pnbAccount =
+      Account(103, 2000.0, Customer('Rachel', 'Delhi', 9876543212));
+
+  sbiAccount.deposit(5000.0);
+  sbiAccount.withdraw(2000.0);
+  sbiAccount.display();
+
+  iciciAccount.deposit(8000.0);
+  iciciAccount.withdraw(10000.0);
+  iciciAccount.display();
+
+  pnbAccount.deposit(2000.0);
+  pnbAccount.withdraw(5000.0);
+  pnbAccount.display();
+
+  // dynamic polymorphism
+  RBI rbi = sbi;
+  print(rbi.isInterestRateValid(3.0)); // false
+
+  rbi = icici;
+  print(rbi.isBalanceValid(10000.0)); // true
+
+  rbi = pnb;
+  print(rbi.isWithdrawalLimitValid(25000.0)); // false
+}
+
+49. Suppose a class 'A' has a static method to print "Parent". Its subclass 'B' also has a
+static method with the same name to print "Child". Now call this method by the objects
+of the two classes. Also, call this method by an object of the parent class referring to the
+child class i.e. A obj = new B ().
+=>class A {
+  static void printMessage() {
+    print("Parent");
+  }
+}
+
+class B extends A {
+  static void printMessage() {
+    print("Child");
+  }
+}
+
+void main() {
+  A.printMessage(); // prints "Parent"
+  B.printMessage(); // prints "Child"
+  
+  A obj = new B();
+  obj.printMessage(); // prints "Parent"
+}
+
+50. Create a program for asynchronous programming using async & await .
+=>import 'dart:async';
+
+Future<void> main() async {
+  print('Starting the program...');
+
+  await task1();
+  await task2();
+  await task3();
+
+  print('Program completed!');
+}
+
+Future<void> task1() async {
+  print('Starting task 1...');
+  await Future.delayed(Duration(seconds: 2));
+  print('Task 1 completed!');
+}
+
+Future<void> task2() async {
+  print('Starting task 2...');
+  await Future.delayed(Duration(seconds: 3));
+  print('Task 2 completed!');
+}
+
+Future<void> task3() async {
+  print('Starting task 3...');
+  await Future.delayed(Duration(seconds: 1));
+  print('Task 3 completed!');
+}
+
+
+51. Create a program using List.
+=>void main() {
+  // Creating a list of integers
+  List<int> numbers = [1, 2, 3, 4, 5];
+
+  // Accessing list elements using index
+  print("First element: ${numbers[0]}");
+  print("Third element: ${numbers[2]}");
+
+  // Adding elements to the list
+  numbers.add(6);
+  numbers.addAll([7, 8, 9]);
+
+  // Removing elements from the list
+  numbers.remove(2);
+  numbers.removeAt(3);
+
+  // Checking if an element is present in the list
+  bool containsFive = numbers.contains(5);
+  print("Does the list contain 5? $containsFive");
+
+  // Sorting the list in ascending order
+  numbers.sort();
+
+  // Printing the final list
+  print("Final list: $numbers");
+}
+
+
+52. Create a program using Set
+=>void main() {
+  // Creating a set of integers
+  Set<int> mySet = Set();
+
+  // Adding elements to the set
+  mySet.add(1);
+  mySet.add(2);
+  mySet.add(3);
+  mySet.add(2); // Adding a duplicate element
+
+  // Printing the set
+  print(mySet); // Output: {1, 2, 3}
+
+  // Checking if an element exists in the set
+  print(mySet.contains(2)); // Output: true
+
+  // Removing an element from the set
+  mySet.remove(3);
+  print(mySet); // Output: {1, 2}
+
+  // Iterating over the set
+  for (int element in mySet) {
+    print(element);
+  }
+  // Output:
+  // 1
+  // 2
+}
+
+53. Create a program using Map
+=>void main() {
+  // Creating a Map with String keys and int values
+  Map<String, int> myMap = {
+    'apple': 5,
+    'banana': 3,
+    'orange': 2,
+  };
+  
+  // Adding a new key-value pair to the Map
+  myMap['grapes'] = 4;
+  
+  // Accessing the value of a key
+  print('Number of apples: ${myMap['apple']}');
+  
+  // Updating the value of a key
+  myMap['banana'] = 6;
+  
+  // Removing a key-value pair from the Map
+  myMap.remove('orange');
+  
+  // Iterating over the Map and printing all the key-value pairs
+  print('All items in the Map:');
+  myMap.forEach((key, value) => print('$key: $value'));
+}
+output:-Number of apples: 5
+All items in the Map:
+apple: 5
+banana: 6
+grapes: 4
+
+
+
+
+
+
+
+
+
+
+
